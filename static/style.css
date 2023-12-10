@@ -1,0 +1,25 @@
+/* custom-styles.css */
+
+/* Style the navbar background and text color */
+.navbar {
+    background-color: #3498db; /* Change to your desired background color */
+    color: rgb(224, 191, 191); /* Text color */
+}
+
+/* Style the page container */
+.container {
+    margin-top: 20px;
+}
+
+/* Add styles for the input elements */
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Customize the submit button */
+.btn-primary {
+    background-color: #b7a1a1; /* Change to your desired button color */
+    border: none;
+}
+
+/* Add more custom styles as needed */

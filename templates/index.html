@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image editor</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      
+      body {
+        background-color: #003366;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        background-color: #003366;
+        color: #6B8E23;
+      }
+      .navbar-brand {
+        font-size: 24px;
+      }
+      .nav-link {
+        color: #6B8E23;
+      }
+      .container {
+        background-color: #B0E0E6;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #00008B;
+      }
+      .btn-primary {
+        background-color: #888;
+        border-color: #000000;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      .input-group-text {
+        background-color: #003366;
+        color: #fff;
+      }
+      .form-control {
+        border-color:#003366;
+      }
+      select.form-select {
+        background-color: #003366;
+        color: #fff;
+        border-color: #007bff;
+      }
+      .dropdown-item:hover {
+        background-color: #003366;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Styling App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Choice Your Action Below
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">PNG</a></li>
+                <li><a class="dropdown-item" href="#">JPG</a></li>
+                <li><a class="dropdown-item" href="#">Webp</a></li>
+                <li><a class="dropdown-item" href="#">GrayScale</a></li>
+                <li><a class="dropdown-item" href="#">Blurr</a></li>
+                <li><a class="dropdown-item" href="#">Invert Colours</a></li>
+                <li><a class="dropdown-item" href="#">Rotate</a></li>
+
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="text-center my-1">Image alteration</h1>
+      <form action="/edit" enctype="multipart/form-data" method="post">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="file">Upload</label>
+          <input type="file" class="form-control" id="file" name="file" />
+        </div>
+
+        <div class="input-group mb-3">
+          <select class="form-select" id="operation" name="operation">
+            <option selected>Choose File to Convert</option>
+            <option value="cpng">Convert to PNG</option>
+            <option value="cjpg">Convert to JPG</option>
+            <option value="cwebp">Convert to Webp</option>
+            <option value="gray">Convert to GrayScale</option>
+            <option value="invert">Convert to Invert Colors</option>
+            <option value="blur">Convert to Blur Image</option>
+            <option value="rotate">Rotate Image</option>
+          </select>
+          <input
+            type="number"
+            name="rotation_angle"
+            placeholder="Rotation Angle (degrees)"
+          />
+          <label class="input-group-text" for="inputGroupSelect02"
+            >Options</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
